@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Kitty Language Server" width="100%">
+  <img src="assets/banner.png" alt="Kitty Language Server" width="100%">
 </p>
 
 <h1 align="center">Kitty Language Server</h1>
@@ -40,7 +40,7 @@ Context-aware autocompletion for all 300+ kitty options, directives, and actions
 - **Directive snippets** for `map`, `mouse_map`, `include`, `globinclude`, `env`
 
 <p align="center">
-  <img src="assets/demo-completion.svg" alt="IntelliSense completions demo" width="700">
+  <img src="assets/demo-completion.png" alt="IntelliSense completions demo" width="700">
 </p>
 
 ### Hover Documentation
@@ -48,7 +48,7 @@ Context-aware autocompletion for all 300+ kitty options, directives, and actions
 Hover over any option to see its description, type, default value, allowed values, and a link to the kitty docs.
 
 <p align="center">
-  <img src="assets/demo-hover.svg" alt="Hover documentation demo" width="700">
+  <img src="assets/demo-hover.png" alt="Hover documentation demo" width="700">
 </p>
 
 ### Diagnostics and Validation
@@ -62,7 +62,7 @@ Real-time validation catches configuration errors as you type:
 - Invalid color formats
 
 <p align="center">
-  <img src="assets/demo-diagnostics.svg" alt="Diagnostics demo" width="700">
+  <img src="assets/demo-diagnostics.png" alt="Diagnostics demo" width="700">
 </p>
 
 ## Installation
