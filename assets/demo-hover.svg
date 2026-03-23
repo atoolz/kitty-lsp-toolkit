@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="800" height="350">
+  <defs>
+    <filter id="dropShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="350" rx="8" fill="#1e1e1e"/>
+
+  <!-- Title bar -->
+  <rect width="800" height="32" rx="8" fill="#323233"/>
+  <rect y="24" width="800" height="8" fill="#323233"/>
+  <rect x="20" y="4" width="130" height="26" fill="#1e1e1e" rx="4"/>
+  <text x="32" y="21" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace" font-size="12" fill="#cccccc">kitty.conf</text>
+
+  <!-- Line numbers gutter -->
+  <rect x="0" y="32" width="40" height="296" fill="#1e1e1e"/>
+
+  <!-- Code content -->
+  <g font-family="'Cascadia Code', 'Fira Code', Consolas, monospace" font-size="14">
+    <!-- Line 1: comment -->
+    <text x="14" y="62" fill="#555">1</text>
+    <text x="50" y="62" fill="#6a9955"># Cursor customization</text>
+
+    <!-- Line 2 -->
+    <text x="14" y="84" fill="#555">2</text>
+
+    <!-- Line 3: cursor_shape highlighted (hovered) -->
+    <text x="14" y="106" fill="#555">3</text>
+    <!-- Hover highlight background -->
+    <rect x="48" y="93" width="104" height="18" fill="#264f78" opacity="0.4" rx="2"/>
+    <text x="50" y="106" fill="#569cd6" text-decoration="underline">cursor_shape</text>
+    <text x="154" y="106" fill="#ce9178">    beam</text>
+
+    <!-- Line 4 -->
+    <text x="14" y="128" fill="#555">4</text>
+    <text x="50" y="128" fill="#569cd6">cursor_blink_interval</text>
+    <text x="224" y="128" fill="#b5cea8"> -1</text>
+
+    <!-- Line 5 -->
+    <text x="14" y="150" fill="#555">5</text>
+    <text x="50" y="150" fill="#569cd6">cursor_stop_blinking_after</text>
+    <text x="268" y="150" fill="#b5cea8"> 15.0</text>
+
+    <!-- Line 6 -->
+    <text x="14" y="172" fill="#555">6</text>
+  </g>
+
+  <!-- Hover tooltip -->
+  <g filter="url(#dropShadow)">
+    <rect x="48" y="112" width="420" height="148" rx="6" fill="#252526" stroke="#454545" stroke-width="1"/>
+
+    <!-- Tooltip header -->
+    <g font-family="'Cascadia Code', 'Fira Code', Consolas, monospace" font-size="13">
+      <text x="64" y="136" fill="#569cd6" font-weight="700">cursor_shape</text>
+      <text x="180" y="136" fill="#888" font-size="11">enum</text>
+    </g>
+
+    <rect x="48" y="144" width="420" height="1" fill="#454545"/>
+
+    <!-- Tooltip body -->
+    <g font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="13">
+      <text x="64" y="166" fill="#cccccc">The shape of the cursor.</text>
+
+      <!-- Enum values -->
+      <text x="64" y="190" fill="#ce9178" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace" font-size="12">block</text>
+      <text x="107" y="190" fill="#888"> | </text>
+      <text x="122" y="190" fill="#ce9178" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace" font-size="12">beam</text>
+      <text x="158" y="190" fill="#888"> | </text>
+      <text x="173" y="190" fill="#ce9178" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace" font-size="12">underline</text>
+
+      <text x="64" y="214" fill="#888">Default: </text>
+      <text x="126" y="214" fill="#b5cea8" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace" font-size="12">block</text>
+
+      <!-- Doc link -->
+      <text x="64" y="250" fill="#f59e0b" font-size="12" text-decoration="underline">Kitty Documentation</text>
+    </g>
+  </g>
+
+  <!-- Status bar -->
+  <rect y="328" width="800" height="22" fill="#2d2d2d"/>
+  <text x="12" y="343" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace" font-size="11" fill="#888">kitty-lsp</text>
+  <text x="700" y="343" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace" font-size="11" fill="#ffffff">Ln 3, Col 1</text>
+</svg>

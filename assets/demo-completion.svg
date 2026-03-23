@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <filter id="dropShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" rx="8" fill="#1e1e1e"/>
+
+  <!-- Title bar -->
+  <rect width="800" height="32" rx="8" fill="#323233"/>
+  <rect y="24" width="800" height="8" fill="#323233"/>
+  <rect x="20" y="4" width="130" height="26" fill="#1e1e1e" rx="4"/>
+  <text x="32" y="21" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace" font-size="12" fill="#cccccc">kitty.conf</text>
+
+  <!-- Breadcrumb bar -->
+  <rect y="32" width="800" height="22" fill="#252526"/>
+  <text x="50" y="47" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace" font-size="11" fill="#888">kitty.conf</text>
+
+  <!-- Line numbers gutter -->
+  <rect x="0" y="54" width="40" height="424" fill="#1e1e1e"/>
+
+  <!-- Code content -->
+  <g font-family="'Cascadia Code', 'Fira Code', Consolas, monospace" font-size="14">
+    <!-- Line 1: comment -->
+    <text x="14" y="78" fill="#555">1</text>
+    <text x="50" y="78" fill="#6a9955"># Font Configuration</text>
+
+    <!-- Line 2: blank -->
+    <text x="14" y="100" fill="#555">2</text>
+
+    <!-- Line 3: font_family -->
+    <text x="14" y="122" fill="#555">3</text>
+    <text x="50" y="122" fill="#569cd6">font_family</text>
+    <text x="142" y="122" fill="#ce9178">      FiraCode Nerd Font</text>
+
+    <!-- Line 4: bold_font -->
+    <text x="14" y="144" fill="#555">4</text>
+    <text x="50" y="144" fill="#569cd6">bold_font</text>
+    <text x="126" y="144" fill="#ce9178">        auto</text>
+
+    <!-- Line 5: blank -->
+    <text x="14" y="166" fill="#555">5</text>
+
+    <!-- Line 6: typing cursor_ with cursor -->
+    <text x="14" y="188" fill="#555">6</text>
+    <text x="50" y="188" fill="#569cd6">cursor_</text>
+    <!-- Blinking cursor -->
+    <rect x="109" y="175" width="2" height="17" fill="#f59e0b">
+      <animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Line 7 -->
+    <text x="14" y="210" fill="#555">7</text>
+
+    <!-- Line 8: comment -->
+    <text x="14" y="232" fill="#555">8</text>
+    <text x="50" y="232" fill="#6a9955"># Colors</text>
+
+    <!-- Line 9 -->
+    <text x="14" y="254" fill="#555">9</text>
+    <text x="50" y="254" fill="#569cd6">foreground</text>
+    <text x="134" y="254" fill="#ce9178">      #dddddd</text>
+
+    <!-- Line 10 -->
+    <text x="10" y="276" fill="#555">10</text>
+    <text x="50" y="276" fill="#569cd6">background</text>
+    <text x="134" y="276" fill="#ce9178">      #1a1a2e</text>
+
+    <!-- Line 11 -->
+    <text x="10" y="298" fill="#555">11</text>
+  </g>
+
+  <!-- Completion dropdown -->
+  <g filter="url(#dropShadow)">
+    <rect x="48" y="194" width="360" height="220" rx="4" fill="#252526" stroke="#454545" stroke-width="1"/>
+
+    <g font-family="'Cascadia Code', 'Fira Code', Consolas, monospace" font-size="13">
+      <!-- Selected item -->
+      <rect x="50" y="196" width="356" height="24" fill="#094771" rx="2"/>
+      <text x="70" y="213" fill="#f59e0b">&#9638;</text>
+      <text x="90" y="213" fill="#ffffff">cursor_shape</text>
+      <text x="260" y="213" fill="#888" font-size="10">enum [Cursor]</text>
+
+      <!-- Item 2 -->
+      <text x="70" y="237" fill="#569cd6">&#9638;</text>
+      <text x="90" y="237" fill="#cccccc">cursor_beam_thickness</text>
+      <text x="260" y="237" fill="#888" font-size="10">number [Cursor]</text>
+
+      <!-- Item 3 -->
+      <text x="70" y="261" fill="#569cd6">&#9638;</text>
+      <text x="90" y="261" fill="#cccccc">cursor_underline_thickness</text>
+      <text x="310" y="261" fill="#888" font-size="10">number</text>
+
+      <!-- Item 4 -->
+      <text x="70" y="285" fill="#569cd6">&#9638;</text>
+      <text x="90" y="285" fill="#cccccc">cursor_blink_interval</text>
+      <text x="260" y="285" fill="#888" font-size="10">number [Cursor]</text>
+
+      <!-- Item 5 -->
+      <text x="70" y="309" fill="#569cd6">&#9638;</text>
+      <text x="90" y="309" fill="#cccccc">cursor_stop_blinking_after</text>
+      <text x="310" y="309" fill="#888" font-size="10">number</text>
+
+      <!-- Item 6 -->
+      <text x="70" y="333" fill="#569cd6">&#9638;</text>
+      <text x="90" y="333" fill="#cccccc">cursor_trail</text>
+      <text x="260" y="333" fill="#888" font-size="10">number [Cursor]</text>
+
+      <!-- Item 7 -->
+      <text x="70" y="357" fill="#569cd6">&#9638;</text>
+      <text x="90" y="357" fill="#cccccc">cursor_trail_decay</text>
+      <text x="260" y="357" fill="#888" font-size="10">string [Cursor]</text>
+
+      <!-- Item 8 -->
+      <text x="70" y="381" fill="#569cd6">&#9638;</text>
+      <text x="90" y="381" fill="#cccccc">cursor_trail_start_threshold</text>
+      <text x="310" y="381" fill="#888" font-size="10">number</text>
+    </g>
+  </g>
+
+  <!-- Detail panel -->
+  <g filter="url(#dropShadow)">
+    <rect x="412" y="194" width="340" height="100" rx="4" fill="#252526" stroke="#454545" stroke-width="1"/>
+    <g font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="12">
+      <text x="428" y="216" fill="#569cd6" font-weight="600">cursor_shape</text>
+      <text x="534" y="216" fill="#888">enum</text>
+      <rect x="412" y="224" width="340" height="1" fill="#454545"/>
+      <text x="428" y="244" fill="#cccccc">The shape of the cursor.</text>
+      <text x="428" y="264" fill="#888">Values: </text>
+      <text x="480" y="264" fill="#ce9178" font-family="monospace">block | beam | underline</text>
+      <text x="428" y="284" fill="#888">Default: </text>
+      <text x="486" y="284" fill="#ce9178">block</text>
+    </g>
+  </g>
+
+  <!-- Status bar -->
+  <rect y="478" width="800" height="22" fill="#2d2d2d"/>
+  <text x="12" y="493" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace" font-size="11" fill="#888">kitty-lsp</text>
+  <text x="700" y="493" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace" font-size="11" fill="#888">Ln 6, Col 8</text>
+</svg>

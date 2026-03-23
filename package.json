@@ -1,0 +1,42 @@
+{
+  "name": "kitty-lsp-toolkit",
+  "version": "0.1.0",
+  "description": "Language Server Protocol implementation for Kitty terminal configuration files",
+  "author": {
+    "name": "Andre Ahlert"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atoolz/kitty-lsp-toolkit"
+  },
+  "keywords": [
+    "kitty",
+    "terminal",
+    "lsp",
+    "language-server",
+    "config"
+  ],
+  "bin": {
+    "kitty-lsp": "./dist/server.js"
+  },
+  "main": "./dist/server.js",
+  "scripts": {
+    "build": "node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "lint": "tsc --noEmit",
+    "test": "tsc -p tsconfig.test.json && mocha dist-test/test/**/*.test.js --timeout 10000",
+    "prepublish": "npm run build"
+  },
+  "dependencies": {
+    "vscode-languageserver": "^9.0.1",
+    "vscode-languageserver-textdocument": "^1.0.12"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.11.0",
+    "esbuild": "^0.20.0",
+    "mocha": "^11.7.5",
+    "typescript": "^5.3.0"
+  }
+}
