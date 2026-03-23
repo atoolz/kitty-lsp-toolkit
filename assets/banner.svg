@@ -13,37 +13,33 @@
       <stop offset="50%" stop-color="#f59e0b" stop-opacity="1"/>
       <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <clipPath id="editorClip">
-      <rect x="620" y="80" width="520" height="460" rx="8"/>
+    <clipPath id="termClip">
+      <rect x="620" y="80" width="520" height="460" rx="4"/>
     </clipPath>
   </defs>
 
   <!-- Background -->
   <rect width="1200" height="630" fill="url(#bgGrad)"/>
 
-  <!-- Subtle grid pattern -->
+  <!-- Subtle grid -->
   <g opacity="0.03">
-    <line x1="0" y1="0" x2="0" y2="630" stroke="#f59e0b" stroke-width="1" transform="translate(60,0)" />
-    <line x1="0" y1="0" x2="0" y2="630" stroke="#f59e0b" stroke-width="1" transform="translate(120,0)" />
-    <line x1="0" y1="0" x2="0" y2="630" stroke="#f59e0b" stroke-width="1" transform="translate(180,0)" />
-    <line x1="0" y1="0" x2="0" y2="630" stroke="#f59e0b" stroke-width="1" transform="translate(240,0)" />
-    <line x1="0" y1="0" x2="0" y2="630" stroke="#f59e0b" stroke-width="1" transform="translate(300,0)" />
-    <line x1="0" y1="630" x2="1200" y2="630" stroke="#f59e0b" stroke-width="1" transform="translate(0,-60)" />
-    <line x1="0" y1="630" x2="1200" y2="630" stroke="#f59e0b" stroke-width="1" transform="translate(0,-120)" />
-    <line x1="0" y1="630" x2="1200" y2="630" stroke="#f59e0b" stroke-width="1" transform="translate(0,-180)" />
-    <line x1="0" y1="630" x2="1200" y2="630" stroke="#f59e0b" stroke-width="1" transform="translate(0,-240)" />
+    <line x1="60" y1="0" x2="60" y2="630" stroke="#f59e0b" stroke-width="1"/>
+    <line x1="120" y1="0" x2="120" y2="630" stroke="#f59e0b" stroke-width="1"/>
+    <line x1="180" y1="0" x2="180" y2="630" stroke="#f59e0b" stroke-width="1"/>
+    <line x1="240" y1="0" x2="240" y2="630" stroke="#f59e0b" stroke-width="1"/>
+    <line x1="0" y1="570" x2="1200" y2="570" stroke="#f59e0b" stroke-width="1"/>
+    <line x1="0" y1="510" x2="1200" y2="510" stroke="#f59e0b" stroke-width="1"/>
+    <line x1="0" y1="450" x2="1200" y2="450" stroke="#f59e0b" stroke-width="1"/>
+    <line x1="0" y1="390" x2="1200" y2="390" stroke="#f59e0b" stroke-width="1"/>
   </g>
 
-  <!-- Amber accent line top -->
+  <!-- Accent lines -->
   <rect x="0" y="0" width="1200" height="2" fill="url(#accentLine)"/>
+  <rect x="0" y="628" width="1200" height="2" fill="url(#accentLine)"/>
 
-  <!-- LEFT SIDE: Icon + Text -->
+  <!-- LEFT SIDE -->
 
-  <!-- Icon: amber rounded square with "Kt" -->
+  <!-- Icon -->
   <rect x="60" y="120" width="90" height="90" rx="18" fill="url(#iconGrad)"/>
   <rect x="61" y="121" width="88" height="88" rx="17" fill="none" stroke="#fbbf24" stroke-width="1" opacity="0.4"/>
   <text x="105" y="168" text-anchor="middle" dominant-baseline="central" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="700" fill="#ffffff" letter-spacing="-1">Kt</text>
@@ -55,149 +51,135 @@
   <!-- Divider -->
   <rect x="60" y="240" width="480" height="1" fill="#f59e0b" opacity="0.3"/>
 
-  <!-- Features list -->
-  <g font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="18" fill="#e5e5e5">
-    <!-- Feature 1 -->
+  <!-- Features -->
+  <g font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="18">
     <circle cx="80" cy="283" r="4" fill="#f59e0b"/>
     <text x="100" y="289" font-weight="600" fill="#f59e0b">Diagnostics</text>
     <text x="240" y="289" fill="#a3a3a3" font-size="15">real-time validation</text>
 
-    <!-- Feature 2 -->
     <circle cx="80" cy="323" r="4" fill="#f59e0b"/>
     <text x="100" y="329" font-weight="600" fill="#f59e0b">300+ options</text>
     <text x="245" y="329" fill="#a3a3a3" font-size="15">complete coverage</text>
 
-    <!-- Feature 3 -->
     <circle cx="80" cy="363" r="4" fill="#f59e0b"/>
     <text x="100" y="369" font-weight="600" fill="#f59e0b">Hover docs</text>
     <text x="240" y="369" fill="#a3a3a3" font-size="15">types, defaults, allowed values</text>
 
-    <!-- Feature 4 -->
     <circle cx="80" cy="403" r="4" fill="#f59e0b"/>
     <text x="100" y="409" font-weight="600" fill="#f59e0b">80+ actions</text>
     <text x="240" y="409" fill="#a3a3a3" font-size="15">map / mouse_map completions</text>
 
-    <!-- Feature 5 -->
     <circle cx="80" cy="443" r="4" fill="#f59e0b"/>
     <text x="100" y="449" font-weight="600" fill="#f59e0b">Any editor</text>
     <text x="238" y="449" fill="#a3a3a3" font-size="15">Neovim, Helix, Emacs, Zed, Sublime</text>
   </g>
 
-  <!-- Editor icons row -->
-  <g font-family="'Cascadia Code', 'Fira Code', Consolas, monospace" font-size="13" fill="#888" opacity="0.5">
-    <text x="80" y="510">nvim</text>
-    <text x="150" y="510">hx</text>
-    <text x="200" y="510">emacs</text>
-    <text x="280" y="510">zed</text>
-    <text x="340" y="510">subl</text>
+  <!-- Install command -->
+  <g font-family="'Cascadia Code', 'Fira Code', Consolas, monospace" font-size="14" opacity="0.6">
+    <text x="80" y="510" fill="#f59e0b">$</text>
+    <text x="100" y="510" fill="#888">npm install -g kitty-lsp-toolkit</text>
   </g>
 
-  <!-- RIGHT SIDE: Simulated editor -->
-  <g clip-path="url(#editorClip)">
-    <!-- Editor window background -->
-    <rect x="620" y="80" width="520" height="460" rx="8" fill="#1e1e1e" stroke="#333" stroke-width="1"/>
+  <!-- RIGHT SIDE: Terminal with Neovim -->
+  <g clip-path="url(#termClip)">
+    <!-- Terminal background -->
+    <rect x="620" y="80" width="520" height="460" rx="4" fill="#0e1019" stroke="#333" stroke-width="1"/>
 
-    <!-- Title bar -->
-    <rect x="620" y="80" width="520" height="32" rx="8" fill="#323233"/>
-    <rect x="620" y="104" width="520" height="8" fill="#323233"/>
-    <!-- Tab -->
-    <rect x="640" y="82" width="140" height="28" fill="#1e1e1e" rx="4"/>
-    <text x="652" y="100" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace" font-size="12" fill="#cccccc">kitty.conf</text>
+    <!-- Neovim top bar -->
+    <rect x="620" y="80" width="520" height="20" fill="#1a1b26"/>
+    <text x="636" y="94" font-family="'Cascadia Code', monospace" font-size="11" fill="#565f89">NORMAL</text>
+    <text x="700" y="94" font-family="'Cascadia Code', monospace" font-size="11" fill="#7aa2f7">kitty.conf</text>
+    <text x="1080" y="94" font-family="'Cascadia Code', monospace" font-size="11" fill="#565f89">utf-8</text>
 
-    <!-- Line numbers gutter -->
-    <rect x="620" y="112" width="40" height="428" fill="#1e1e1e"/>
+    <!-- Line number column -->
+    <rect x="620" y="100" width="32" height="420" fill="#0e1019"/>
 
-    <!-- Code content -->
+    <!-- Code lines -->
     <g font-family="'Cascadia Code', 'Fira Code', Consolas, monospace" font-size="13">
-      <!-- Line 1: comment -->
-      <text x="640" y="138" fill="#555">1</text>
-      <text x="670" y="138" fill="#6a9955"># Kitty terminal configuration</text>
+      <!-- Line 1 -->
+      <text x="636" y="120" fill="#3b4261">1</text>
+      <text x="660" y="120" fill="#565f89"># Kitty config</text>
 
-      <!-- Line 2: blank -->
-      <text x="640" y="158" fill="#555">2</text>
+      <!-- Line 2 -->
+      <text x="636" y="140" fill="#3b4261">2</text>
 
-      <!-- Line 3: font_family -->
-      <text x="640" y="178" fill="#555">3</text>
-      <text x="670" y="178" fill="#569cd6">font_family</text>
-      <text x="756" y="178" fill="#ce9178">      FiraCode Nerd Font</text>
+      <!-- Line 3 -->
+      <text x="636" y="160" fill="#3b4261">3</text>
+      <text x="660" y="160" fill="#7aa2f7">font_family</text>
+      <text x="748" y="160" fill="#9ece6a"> FiraCode Nerd Font</text>
 
-      <!-- Line 4: font_size -->
-      <text x="640" y="198" fill="#555">4</text>
-      <text x="670" y="198" fill="#569cd6">font_size</text>
-      <text x="744" y="198" fill="#b5cea8">        12.0</text>
+      <!-- Line 4 -->
+      <text x="636" y="180" fill="#3b4261">4</text>
+      <text x="660" y="180" fill="#7aa2f7">font_size</text>
+      <text x="732" y="180" fill="#ff9e64"> 12.0</text>
 
-      <!-- Line 5: blank -->
-      <text x="640" y="218" fill="#555">5</text>
+      <!-- Line 5 -->
+      <text x="636" y="200" fill="#3b4261">5</text>
 
-      <!-- Line 6: comment -->
-      <text x="640" y="238" fill="#555">6</text>
-      <text x="670" y="238" fill="#6a9955"># Cursor customization</text>
+      <!-- Line 6 -->
+      <text x="636" y="220" fill="#3b4261">6</text>
+      <text x="660" y="220" fill="#565f89"># Cursor</text>
 
-      <!-- Line 7: cursor_shape -->
-      <text x="640" y="258" fill="#555">7</text>
-      <text x="670" y="258" fill="#569cd6">cursor_shape</text>
-      <text x="766" y="258" fill="#ce9178">    beam</text>
+      <!-- Line 7 -->
+      <text x="636" y="240" fill="#3b4261">7</text>
+      <text x="660" y="240" fill="#7aa2f7">cursor_shape</text>
+      <text x="756" y="240" fill="#9ece6a"> beam</text>
 
-      <!-- Line 8: cursor_blink -->
-      <text x="640" y="278" fill="#555">8</text>
-      <text x="670" y="278" fill="#569cd6">cursor_blink_interval</text>
-      <text x="838" y="278" fill="#b5cea8"> -1</text>
+      <!-- Line 8 -->
+      <text x="636" y="260" fill="#3b4261">8</text>
+      <text x="660" y="260" fill="#7aa2f7">cursor_blink_interval</text>
+      <text x="828" y="260" fill="#ff9e64"> -1</text>
 
-      <!-- Line 9: blank -->
-      <text x="640" y="298" fill="#555">9</text>
+      <!-- Line 9 -->
+      <text x="636" y="280" fill="#3b4261">9</text>
 
-      <!-- Line 10: comment -->
-      <text x="636" y="318" fill="#555">10</text>
-      <text x="670" y="318" fill="#6a9955"># Colors</text>
+      <!-- Line 10 -->
+      <text x="632" y="300" fill="#3b4261">10</text>
+      <text x="660" y="300" fill="#565f89"># Colors</text>
 
-      <!-- Line 11: foreground with hex color -->
-      <text x="636" y="338" fill="#555">11</text>
-      <text x="670" y="338" fill="#569cd6">foreground</text>
-      <text x="750" y="338" fill="#d4d4d4">     </text>
-      <rect x="800" y="326" width="12" height="12" rx="2" fill="#dddddd" stroke="#555" stroke-width="0.5"/>
-      <text x="818" y="338" fill="#ce9178">#dddddd</text>
+      <!-- Line 11 -->
+      <text x="632" y="320" fill="#3b4261">11</text>
+      <text x="660" y="320" fill="#7aa2f7">foreground</text>
+      <text x="740" y="320" fill="#9ece6a"> #c0caf5</text>
 
-      <!-- Line 12: background with hex color -->
-      <text x="636" y="358" fill="#555">12</text>
-      <text x="670" y="358" fill="#569cd6">background</text>
-      <text x="750" y="358" fill="#d4d4d4">     </text>
-      <rect x="800" y="346" width="12" height="12" rx="2" fill="#1a1a2e" stroke="#555" stroke-width="0.5"/>
-      <text x="818" y="358" fill="#ce9178">#1a1a2e</text>
+      <!-- Line 12 -->
+      <text x="632" y="340" fill="#3b4261">12</text>
+      <text x="660" y="340" fill="#7aa2f7">background</text>
+      <text x="740" y="340" fill="#9ece6a"> #1a1b26</text>
 
-      <!-- Line 13: background_opacity -->
-      <text x="636" y="378" fill="#555">13</text>
-      <text x="670" y="378" fill="#569cd6">background_opacity</text>
-      <text x="822" y="378" fill="#b5cea8"> 0.95</text>
+      <!-- Line 13 -->
+      <text x="632" y="360" fill="#3b4261">13</text>
+      <text x="660" y="360" fill="#7aa2f7">background_opacity</text>
+      <text x="812" y="360" fill="#ff9e64"> 0.95</text>
 
-      <!-- Line 14: blank -->
-      <text x="636" y="398" fill="#555">14</text>
+      <!-- Line 14 -->
+      <text x="632" y="380" fill="#3b4261">14</text>
 
-      <!-- Line 15: map directive -->
-      <text x="636" y="418" fill="#555">15</text>
-      <text x="670" y="418" fill="#c586c0">map</text>
-      <text x="694" y="418" fill="#dcdcaa"> ctrl+shift+c</text>
-      <text x="802" y="418" fill="#9cdcfe"> copy_to_clipboard</text>
+      <!-- Line 15 -->
+      <text x="632" y="400" fill="#3b4261">15</text>
+      <text x="660" y="400" fill="#bb9af7">map</text>
+      <text x="684" y="400" fill="#e0af68"> ctrl+shift+c</text>
+      <text x="800" y="400" fill="#7dcfff"> copy_to_clipboard</text>
 
-      <!-- Line 16: map directive -->
-      <text x="636" y="438" fill="#555">16</text>
-      <text x="670" y="438" fill="#c586c0">map</text>
-      <text x="694" y="438" fill="#dcdcaa"> ctrl+shift+v</text>
-      <text x="802" y="438" fill="#9cdcfe"> paste_from_clipboard</text>
+      <!-- Line 16 -->
+      <text x="632" y="420" fill="#3b4261">16</text>
+      <text x="660" y="420" fill="#bb9af7">map</text>
+      <text x="684" y="420" fill="#e0af68"> ctrl+shift+v</text>
+      <text x="800" y="420" fill="#7dcfff"> paste_from_clipboard</text>
 
-      <!-- Line 17: include directive -->
-      <text x="636" y="458" fill="#555">17</text>
-      <text x="670" y="458" fill="#c586c0">include</text>
-      <text x="726" y="458" fill="#ce9178"> themes/monokai.conf</text>
-
-      <!-- Line 18 -->
-      <text x="636" y="478" fill="#555">18</text>
+      <!-- Line 17 -->
+      <text x="632" y="440" fill="#3b4261">17</text>
+      <text x="660" y="440" fill="#bb9af7">include</text>
+      <text x="716" y="440" fill="#9ece6a"> current-theme.conf</text>
     </g>
+
+    <!-- Neovim bottom status line -->
+    <rect x="620" y="520" width="520" height="20" fill="#1a1b26"/>
+    <text x="636" y="534" font-family="'Cascadia Code', monospace" font-size="11" fill="#7aa2f7">kitty-lsp</text>
+    <text x="1060" y="534" font-family="'Cascadia Code', monospace" font-size="11" fill="#565f89">17:1</text>
   </g>
 
   <!-- Bottom bar -->
   <rect x="0" y="590" width="1200" height="40" fill="#000000" opacity="0.3"/>
-  <text x="600" y="615" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace" font-size="14" fill="#f59e0b" opacity="0.7">npm install -g kitty-lsp-toolkit</text>
-
-  <!-- Amber accent line bottom -->
-  <rect x="0" y="628" width="1200" height="2" fill="url(#accentLine)"/>
+  <text x="600" y="615" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace" font-size="14" fill="#f59e0b" opacity="0.7">github.com/atoolz/kitty-lsp-toolkit</text>
 </svg>
