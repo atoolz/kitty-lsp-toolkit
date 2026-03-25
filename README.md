@@ -68,7 +68,7 @@ Real-time validation catches configuration errors as you type:
 ## Installation
 
 ```bash
-npm install -g kitty-lsp-toolkit
+npm install -g @atoolz/kitty-lsp-toolkit
 ```
 
 This installs the `kitty-lsp` binary globally.
