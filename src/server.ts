@@ -28,6 +28,12 @@ import type {
   CompletionParams,
 } from "vscode-languageserver/node";
 
+const hasTransportArg = process.argv.some(arg =>
+  arg === '--stdio' || arg === '--node-ipc' || arg.startsWith('--socket') || arg.startsWith('--pipe')
+);
+if (!hasTransportArg) {
+  process.argv.push('--stdio');
+}
 const connection = createConnection(ProposedFeatures.all);
 const documents = new TextDocuments(TextDocument);
 
